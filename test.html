@@ -3,11 +3,54 @@
         <title>
             Test Page for Daily Grind
         </title>
+        <link id="mainStylesheet" rel="stylesheet" href="css/default.css" />
+        <style type="text/css">
+        
+            html {background-color:#FF7518;/* pumpkin - overwrites default */}
+            
+            .feature {color:#FF7518; /* daily feature color - pumpkin! */}
+            
+            .masthead{
+                font-family: 'Holtwood One SC', serif; /* required for google font */
+                font-size:3em;
+            }
+        
+            #logo{
+                float:right;
+                display:inline-block;
+                padding:2px;
+                max-width:100px; /* actual size of image */
+                width:20%; /* approximate size taken on screen in maximum view */
+            }
+        
+            #coffee {
+                float:left;
+                display:inline-block;
+                padding:20px;
+                max-width:300px; /* best if actual size of image */
+                width:33%; /* approximate size taken on screen in maximum view */
+            }
+    
+            h3.slogan{
+               font-style:italic; /* make the slogan italics */ 
+            }
+        </style>
     </head>
     <body>
         <h1>Test Page for Daily Grind</h1>
-        <script>
-            alert("Hi, I'm JS!")
-        </script>
+
+        <span id ="coffee-output">Coffee goes here.</span>
+
+
+        <h3>Coffee Specials for Each Day of the Week</h3>
+        <p><a href="?day=0">Sunday</a></p>
+        <p><a href="?day=1">Monday</a></p>
+        <p><a href="?day=2">Tuesday</a></p>
+        <p><a href="?day=3">Wednesday</a></p>
+        <p><a href="?day=4">Thursday</a></p>
+        <p><a href="?day=5">Friday</a></p>
+        <p><a href="?day=6">Saturday</a></p>
+        
+        <script src="js/daily-grind.js"></script>
     </body>
 </html>
