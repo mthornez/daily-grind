@@ -59,12 +59,19 @@
 	</header>
     <main>
 		 <header><h3 class="slogan">You drink our coffee, we make large bucks!</h3></header>
-        <p>
-    		 <img src="images/pumpkin-spice-latte.jpg" alt="Our Pumpkin Spice Latte tastes great on a Fall Day!" id="coffee" />
-            <strong class="feature">Monday's Coffee Special:</strong> Monday's daily coffee special is <strong class="feature">Pumpkin Spice Latte</strong>, which makes us wish it was always Fall, as this is one of our top sellers!</p>
-        <p><span class="feature">Pumpkin Spice is </span> Gluten-free selfies normcore chillwave. Listicle 90's chambray, seitan cold-pressed try-hard Etsy authentic flexitarian vinyl. Meditation bespoke freegan, single-origin coffee cred seitan 90's gentrify brunch Williamsburg squid cold-pressed. Brooklyn readymade Tumblr wayfarers ethical.</p>
-        <p><span class="feature">Enjoy Pumpkin Spice with our </span> Polaroid iPhone plaid, Pitchfork Shoreditch paleo. Hashtag keytar chia scenester Pinterest, semiotics tousled food truck. YOLO scenester deep v, taxidermy paleo quinoa McSweeney's Carles VHS mustache Williamsburg gluten-free readymade cold-pressed. Truffaut Thundercats Schlitz, listicle organic Brooklyn paleo squid asymmetrical readymade migas gluten-free Austin.</p>
-		 <p>
+
+		 <span id ="coffee-output">Coffee goes here.</span>
+
+
+		 <h3>Coffee Specials for Each Day of the Week</h3>
+		 <p><a href="?day=0">Sunday</a></p>
+		 <p><a href="?day=1">Monday</a></p>
+		 <p><a href="?day=2">Tuesday</a></p>
+		 <p><a href="?day=3">Wednesday</a></p>
+		 <p><a href="?day=4">Thursday</a></p>
+		 <p><a href="?day=5">Friday</a></p>
+		 <p><a href="?day=6">Saturday</a></p>
+		 
 		 <b>At LargeBuck$ we aspire to: </b>Aesthetic gentrify YOLO McSweeney's typewriter single-origin coffee. Slow-carb hella listicle lomo, Helvetica single-origin coffee butcher stumptown. Chambray try-hard church-key mumblecore, tote bag PBR cardigan. Retro Austin Brooklyn, blog Intelligentsia gentrify jean shorts sartorial bicycle rights gastropub. Aesthetic wayfarers Pitchfork, tattooed Carles quinoa meh leggings distillery pork belly banjo. Umami cred lumbersexual skateboard, pork belly Tumblr vegan letterpress. Fixie bicycle rights butcher chillwave, gluten-free health goth Echo Park locavore whatever.
 
 		 </p>
@@ -85,53 +92,6 @@
       </small>
     </footer>
     <!-- END Footer -->
-	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
-	<script type="text/javascript">
-	$("document").ready(function(){
-		$('.seasons a').click(function(e){//find all a tags inside class of seasons
-            e.preventDefault();//stop default submission
-			var season = $(this).attr("href");//contents of href attribute of this element
-			var stylesheet = $('#mainStylesheet');
-			season = season.toLowerCase();
-			switch(season)
-			{
-				case 'spring':
-				$('#logo').attr("src","images/spring.gif");
-				$('#wear').attr("src","images/spring-wear.jpg");
-				$('main header h3').html("Get a jump on Spring wear!");
-				break;
-				
-				case 'summer':
-				$('#logo').attr("src","images/summer.gif");
-				$('#wear').attr("src","images/summer-wear.jpg");
-				$('main header h3').html("Make Summer a hummer!");
-				break;
-				
-				case 'fall':
-				$('#logo').attr("src","images/fall.gif");
-				$('#wear').attr("src","images/fall-wear.jpg");
-				$('main header h3').html("Fall into Fall!");
-				break;
-				
-				case 'winter':
-				$('#logo').attr("src","images/winter.gif");
-				$('#wear').attr("src","images/winter-wear.jpg");
-				$('main header h3').html("Keep warm this Winter!");
-				break;
-				
-				default:
-				$('#logo').attr("src","images/four-seasons.gif");
-				$('#wear').attr("src","images/300x400.png");
-				$('main header h3').html("Outfitter for all seasons!");
-				
-			}
-			
-			var season = "css/" + season + ".css";
-			$(stylesheet).attr("href",season);
-			//alert(season);
-		});
-	});
-    </script>
-	
+	<script src="js/daily-grind.js"></script>
 </body>
 </html>
